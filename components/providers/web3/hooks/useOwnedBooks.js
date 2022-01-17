@@ -16,12 +16,10 @@ export const handler = (web3, contract) => (books, account) => {
           continue;
         }
         const bookHash = createBookHash(web3)(book.id, account);
-        console.log("bookHash", bookHash);
         let ownedBook;
         // if you make transaction, use send
         try {
           ownedBook = await contract.methods.getBookByHash(bookHash).call();
-          console.log("owned book", ownedBook);
         } catch (e) {
           console.log("error in useOwned Hook calling method", e);
         }
@@ -30,7 +28,6 @@ export const handler = (web3, contract) => (books, account) => {
           ownedBooks.push(normalized);
         }
       }
-      console.log("owned Books", ownedBooks);
       return ownedBooks;
     }
   );

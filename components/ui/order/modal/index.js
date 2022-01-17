@@ -45,14 +45,16 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
   const [order, setOrder] = useState(defaultOrder);
   const [enablePrice, setEnablePrice] = useState(false);
   const [hasAgreedTOS, setHasAgreedTOS] = useState(false);
-  const { eth } = useEthPrice();
+  const { eth } = useEthPrice(book.price);
+  // console.log("order", order);
+  // console.log("eth", eth);
 
   useEffect(() => {
     if (!!book) {
       setIsOpen(true);
       setOrder({
         ...defaultOrder,
-        price: eth.perItem,
+        price: eth.itemPrice,
       });
     }
   }, [book]);
@@ -89,7 +91,7 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
                         onChange={({ target: { checked } }) => {
                           setOrder({
                             ...order,
-                            price: checked ? order.price : eth.perItem,
+                            price: checked ? order.price : eth.itemPrice,
                           });
                           setEnablePrice(checked);
                         }}
@@ -182,9 +184,9 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
                   />
                 </label>
                 <span>
-                  I accept Eincode &apos;terms of service&apos; and I agree that
-                  my order can be rejected in the case data provided above are
-                  not correct
+                  I accept Bingology &apos;terms of service&apos; and I agree
+                  that my order can be rejected in the case data provided above
+                  are not correct
                 </span>
               </div>
               {formState.message && (

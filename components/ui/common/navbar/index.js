@@ -6,8 +6,9 @@ import { useRouter } from "next/router";
 export default function Navbar() {
   const { connect, isLoading, requireInstall } = useWeb3();
   const { account } = useAccount();
-  console.log("account", account);
   const { pathname } = useRouter();
+
+  console.log("Accoundata", account);
 
   return (
     //  Make sure the sticky element has top or bottom set. Or in the case of horizontal scrolling, left or right.

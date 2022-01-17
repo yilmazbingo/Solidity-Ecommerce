@@ -14,5 +14,6 @@ export const useEthPrice = (course_price) => {
   const { data, ...rest } = useSWR(URL, fetcher, { refreshInterval: 10000 });
 
   const itemPrice = (data && (course_price / Number(data)).toFixed(6)) ?? null;
+  console.log("itemprice", itemPrice);
   return { eth: { data, itemPrice, ...rest } };
 };
