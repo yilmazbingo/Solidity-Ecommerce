@@ -16,6 +16,7 @@ export const handler = (web3, contract) => (books, account) => {
           continue;
         }
         const bookHash = createBookHash(web3)(book.id, account);
+        console.log("bookHash", bookHash);
         let ownedBook;
         // if you make transaction, use send
         try {

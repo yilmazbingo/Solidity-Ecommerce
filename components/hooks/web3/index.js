@@ -16,6 +16,9 @@ const enhanceHook = (swrRes) => {
     isEmpty,
   };
 };
+
+// export function useWeb3() {
+//   return useContext(Web3Context) }
 export function useHooks(cb) {
   const { hooks } = useWeb3();
   return cb(hooks);
