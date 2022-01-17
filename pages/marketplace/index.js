@@ -17,6 +17,7 @@ export default function Marketplace({ books }) {
   const [selectedBook, setSelectedBook] = useState(null);
   const [isNewPurchase, setIsNewPurchase] = useState(true);
   const { ownedBooks } = useOwnedBooks(books, account.data);
+  console.log("owned Books", ownedBooks);
   const [busyBookId, setBusyBookId] = useState(null);
   const { eth } = useEthPrice();
 
