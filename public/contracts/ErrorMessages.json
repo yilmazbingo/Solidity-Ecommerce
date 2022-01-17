@@ -1,0 +1,380 @@
+{
+  "contractName": "ErrorMessages",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "BookHasOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "BookIsNotCreated",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidState",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "OnlyOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "SenderIsNotBookOwner",
+      "type": "error"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"BookHasOwner\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"BookIsNotCreated\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidState\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"OnlyOwner\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"SenderIsNotBookOwner\",\"type\":\"error\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"errors\":{\"BookHasOwner()\":[{\"notice\":\"Book has already a Owner!\"}],\"BookIsNotCreated()\":[{\"notice\":\"Book is not created\"}],\"InvalidState()\":[{\"notice\":\"Book has invalid state!\"}],\"OnlyOwner()\":[{\"notice\":\"Only owner has an access!\"}],\"SenderIsNotBookOwner()\":[{\"notice\":\"Sender is not book owner!\"}]},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ErrorMessages.sol\":\"ErrorMessages\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ErrorMessages.sol\":{\"keccak256\":\"0x64659f63c67724b56ab87f96ae4807b95839fc42c57a96977907c9d3c5545e9c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://abc5d9f160ef86e09bc6f068db97d28c4ce763011d7ff8219b99ce35d7e94d7e\",\"dweb:/ipfs/QmWUgYjPgASjwSy9s6qPyKamXgQRnVaFjDLZzZ8rX8t3oz\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212206be4b54cd631f209e0b3ac38efded978cf206d46b5524f888fcffc265b16868264736f6c63430008040033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212206be4b54cd631f209e0b3ac38efded978cf206d46b5524f888fcffc265b16868264736f6c63430008040033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "66:307:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "66:307:1:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract ErrorMessages{\n  /// Book has invalid state!\n  error InvalidState();\n  /// Book is not created\n  error BookIsNotCreated();\n  /// Book has already a Owner!\n  error BookHasOwner();\n  /// Only owner has an access!\n  error OnlyOwner();\n  /// Sender is not book owner!\n  error SenderIsNotBookOwner();\n\n}",
+  "sourcePath": "/home/tesla/Documents/projects/ethereum/bookstore-eth/contracts/ErrorMessages.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ErrorMessages.sol",
+    "exportedSymbols": {
+      "ErrorMessages": [
+        496
+      ]
+    },
+    "id": 497,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 480,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 496,
+        "linearizedBaseContracts": [
+          496
+        ],
+        "name": "ErrorMessages",
+        "nameLocation": "75:13:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 481,
+              "nodeType": "StructuredDocumentation",
+              "src": "92:27:1",
+              "text": "Book has invalid state!"
+            },
+            "id": 483,
+            "name": "InvalidState",
+            "nameLocation": "128:12:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 482,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "140:2:1"
+            },
+            "src": "122:21:1"
+          },
+          {
+            "documentation": {
+              "id": 484,
+              "nodeType": "StructuredDocumentation",
+              "src": "146:23:1",
+              "text": "Book is not created"
+            },
+            "id": 486,
+            "name": "BookIsNotCreated",
+            "nameLocation": "178:16:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 485,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "194:2:1"
+            },
+            "src": "172:25:1"
+          },
+          {
+            "documentation": {
+              "id": 487,
+              "nodeType": "StructuredDocumentation",
+              "src": "200:29:1",
+              "text": "Book has already a Owner!"
+            },
+            "id": 489,
+            "name": "BookHasOwner",
+            "nameLocation": "238:12:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 488,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "250:2:1"
+            },
+            "src": "232:21:1"
+          },
+          {
+            "documentation": {
+              "id": 490,
+              "nodeType": "StructuredDocumentation",
+              "src": "256:29:1",
+              "text": "Only owner has an access!"
+            },
+            "id": 492,
+            "name": "OnlyOwner",
+            "nameLocation": "294:9:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 491,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "303:2:1"
+            },
+            "src": "288:18:1"
+          },
+          {
+            "documentation": {
+              "id": 493,
+              "nodeType": "StructuredDocumentation",
+              "src": "309:29:1",
+              "text": "Sender is not book owner!"
+            },
+            "id": 495,
+            "name": "SenderIsNotBookOwner",
+            "nameLocation": "347:20:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 494,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "367:2:1"
+            },
+            "src": "341:29:1"
+          }
+        ],
+        "scope": 497,
+        "src": "66:307:1",
+        "usedErrors": [
+          483,
+          486,
+          489,
+          492,
+          495
+        ]
+      }
+    ],
+    "src": "32:341:1"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/ErrorMessages.sol",
+    "exportedSymbols": {
+      "ErrorMessages": [
+        496
+      ]
+    },
+    "id": 497,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 480,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 496,
+        "linearizedBaseContracts": [
+          496
+        ],
+        "name": "ErrorMessages",
+        "nameLocation": "75:13:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 481,
+              "nodeType": "StructuredDocumentation",
+              "src": "92:27:1",
+              "text": "Book has invalid state!"
+            },
+            "id": 483,
+            "name": "InvalidState",
+            "nameLocation": "128:12:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 482,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "140:2:1"
+            },
+            "src": "122:21:1"
+          },
+          {
+            "documentation": {
+              "id": 484,
+              "nodeType": "StructuredDocumentation",
+              "src": "146:23:1",
+              "text": "Book is not created"
+            },
+            "id": 486,
+            "name": "BookIsNotCreated",
+            "nameLocation": "178:16:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 485,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "194:2:1"
+            },
+            "src": "172:25:1"
+          },
+          {
+            "documentation": {
+              "id": 487,
+              "nodeType": "StructuredDocumentation",
+              "src": "200:29:1",
+              "text": "Book has already a Owner!"
+            },
+            "id": 489,
+            "name": "BookHasOwner",
+            "nameLocation": "238:12:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 488,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "250:2:1"
+            },
+            "src": "232:21:1"
+          },
+          {
+            "documentation": {
+              "id": 490,
+              "nodeType": "StructuredDocumentation",
+              "src": "256:29:1",
+              "text": "Only owner has an access!"
+            },
+            "id": 492,
+            "name": "OnlyOwner",
+            "nameLocation": "294:9:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 491,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "303:2:1"
+            },
+            "src": "288:18:1"
+          },
+          {
+            "documentation": {
+              "id": 493,
+              "nodeType": "StructuredDocumentation",
+              "src": "309:29:1",
+              "text": "Sender is not book owner!"
+            },
+            "id": 495,
+            "name": "SenderIsNotBookOwner",
+            "nameLocation": "347:20:1",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 494,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "367:2:1"
+            },
+            "src": "341:29:1"
+          }
+        ],
+        "scope": 497,
+        "src": "66:307:1",
+        "usedErrors": [
+          483,
+          486,
+          489,
+          492,
+          495
+        ]
+      }
+    ],
+    "src": "32:341:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.2",
+  "updatedAt": "2022-01-04T18:17:08.495Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "BookHasOwner()": [
+        {
+          "notice": "Book has already a Owner!"
+        }
+      ],
+      "BookIsNotCreated()": [
+        {
+          "notice": "Book is not created"
+        }
+      ],
+      "InvalidState()": [
+        {
+          "notice": "Book has invalid state!"
+        }
+      ],
+      "OnlyOwner()": [
+        {
+          "notice": "Only owner has an access!"
+        }
+      ],
+      "SenderIsNotBookOwner()": [
+        {
+          "notice": "Sender is not book owner!"
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

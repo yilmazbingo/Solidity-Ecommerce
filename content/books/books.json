@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "type": "Social philosophy",
+    "title": "Sapiens",
+    "coverImage": "/images/abriefhistoryofhumankind.jpg",
+    "price": 14,
+    "author": "Yuval Noah",
+    "description": "In Sapiens, Professor Yuval Noah Harari spans the whole of human history, from the very first humans to walk the earth to the radical—and sometimes devastating—breakthroughs of the cognitive, agricultural, and scientific revolutions. Drawing on insights from biology, anthropology, paleontology, and economics, and incorporating full-color illustrations throughout the text, Harari explores how the currents of history have shaped our human societies, the animals and plants around us, and even our personalities. Have we become happier as history has unfolded? Can we ever free our behavior from the legacy of our ancestors? And what, if anything, can we do to influence the course of the centuries to come?",
+    "slug": "sapiens-by-yuval-noah",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  },
+  {
+    "id": "2",
+    "type": "Mathematics",
+    "title": "A mind for numbers ",
+    "coverImage": "/images/aMindForNumbers.jpg",
+    "price": 16,
+    "author": "Barbara Oakley",
+    "description": "Whether you are a student struggling to fulfill a math or science requirement, or you are embarking on a career change that requires a new skill set, A Mind for Numbers offers the tools you need to get a better grasp of that intimidating material.",
+    "slug": "a-mind-for-numbers-by-barbara-oakley",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  },
+  {
+    "id": "3",
+    "type": "Comedy",
+    "title": "I cannot make this up",
+    "coverImage": "/images/icantmakethisup.jpg",
+    "price": 8,
+    "author": "Kevin Hart",
+    "description": "New York Times bestselling author, superstar comedian, and Hollywood box office star Kevin Hart turns his immense talent to the written word by writing some words. Some of those words include: the, a, for, above, and even even. Put them together and you have a “hilarious but also heartfelt” (Elle) memoir on survival, success, and the importance of believing in yourself.",
+    "slug": "i-cannot-make-this-up-by-kevin-hart",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  },
+  {
+    "id": 4,
+    "type": "History",
+    "title": "Lord of the flies",
+    "coverImage": "/images/lordoftheflies.jpg",
+    "price": 18,
+    "author": "htc",
+    "description": "Lord of the Flies is a 1954 novel by Nobel Prize–winning British author William Golding. The book focuses on a group of British boys stranded on an uninhabited island and their disastrous attempt to govern themselves.",
+    "slug": "lord-of-the-files-by-htc",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  },
+  {
+    "id": 5,
+    "type": "Story",
+    "title": "of mice and men",
+    "coverImage": "/images/ofmiceandmen.jpg",
+    "price": 24,
+    "author": "John Steinbech",
+    "description": "Of Mice and Men is a novella written by author John Steinbeck. Published in 1937, it tells the story of George Milton and Lennie Small, two displaced migrant ranch workers, who move from place to place in California in search of new job opportunities during the Great Depression in the United States.",
+    "slug": "of-mice-and-men-by-john-steinbeck",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  },
+  {
+    "id": 6,
+    "type": "Biography",
+    "title": "jackson coppley",
+    "coverImage": "/images/thecodehunters.jpg",
+    "price": 17,
+    "author": "apple",
+    "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    "slug": "jackson-coppley-by-apple",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  },
+  {
+    "id": 7,
+    "type": "Drama",
+    "title": "the green mile",
+    "coverImage": "/images/thegreenmile.jpg",
+    "price": 30,
+    "author": "Stephen King",
+    "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    "slug": "the-green-mile-by-stephen-king",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  },
+  {
+    "id": 8,
+    "type": "Comedy",
+    "title": "Born a crime",
+    "coverImage": "/images/trevornoah.jpg",
+    "price": 2,
+    "author": "trevor noah",
+    "description": "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    "slug": "born-a-crime-by-trevor-noah",
+    "wsl": [
+      "Lorem ipsum dolor amet offal butcher quinoa",
+      "Brooklyn sriracha semiotics, DIY coloring",
+      "Taxidermy semiotics celiac stumptown scenester normcore,"
+    ]
+  }
+]
