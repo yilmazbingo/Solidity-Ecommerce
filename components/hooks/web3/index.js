@@ -1,4 +1,4 @@
-import { useHooks } from "@components/providers/web3";
+// import { useHooks } from "@components/providers/web3";
 import { useEffect } from "react";
 import { useWeb3 } from "@components/providers";
 import { useRouter } from "next/router";
@@ -16,8 +16,12 @@ const enhanceHook = (swrRes) => {
     isEmpty,
   };
 };
-
+export function useHooks(cb) {
+  const { hooks } = useWeb3();
+  return cb(hooks);
+}
 export const useNetwork = () => {
+  // useHooks is returning the swrRes
   const swrRes = enhanceHook(useHooks((hooks) => hooks.useNetwork)());
   return {
     network: swrRes,

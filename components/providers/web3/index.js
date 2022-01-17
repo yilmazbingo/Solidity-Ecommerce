@@ -57,6 +57,9 @@ export default function Web3Provider({ children }) {
 
   const _web3Api = useMemo(() => {
     const { web3, provider, isLoading } = web3Api;
+    console.log("isLoading", isLoading);
+    console.log("web3", web3);
+    console.log("requireInstall: ", !isLoading && !web3);
     return {
       ...web3Api,
       requireInstall: !isLoading && !web3,
@@ -84,7 +87,7 @@ export function useWeb3() {
   return useContext(Web3Context);
 }
 
-export function useHooks(cb) {
-  const { hooks } = useWeb3();
-  return cb(hooks);
-}
+// export function useHooks(cb) {
+//   const { hooks } = useWeb3();
+//   return cb(hooks);
+// }
