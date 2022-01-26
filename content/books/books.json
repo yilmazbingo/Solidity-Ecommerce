@@ -45,7 +45,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": "4",
     "type": "History",
     "title": "Lord of the flies",
     "coverImage": "/images/lordoftheflies.jpg",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": "5",
     "type": "Story",
     "title": "of mice and men",
     "coverImage": "/images/ofmiceandmen.jpg",
@@ -75,7 +75,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": "6",
     "type": "Biography",
     "title": "jackson coppley",
     "coverImage": "/images/thecodehunters.jpg",
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": "7",
     "type": "Drama",
     "title": "the green mile",
     "coverImage": "/images/thegreenmile.jpg",
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": "8",
     "type": "Comedy",
     "title": "Born a crime",
     "coverImage": "/images/trevornoah.jpg",

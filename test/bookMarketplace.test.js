@@ -199,6 +199,7 @@ contract("BookMarketplace", (accounts) => {
       );
     });
   });
+
   describe("Repurchase book", () => {
     let bookHash2 = null;
     before(async () => {
@@ -262,6 +263,7 @@ contract("BookMarketplace", (accounts) => {
       await catchRevert(_contract.repurchaseBook(bookHash2, { from: buyer }));
     });
   });
+
   describe("Receive funds", () => {
     it("should have transacted funds", async () => {
       const value = "100000000000000000";

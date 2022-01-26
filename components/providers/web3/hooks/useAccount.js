@@ -16,6 +16,7 @@ export const handler = (web3, provider) => () => {
     async () => {
       // if i m not logged in metamask, accounts[0] would be undefined. we should either return data or error in SWR
       const accounts = await web3.eth.getAccounts();
+      console.log("accounts", accounts);
       const account = accounts[0];
       if (!account) {
         throw new Error(
@@ -25,6 +26,8 @@ export const handler = (web3, provider) => () => {
       return account;
     }
   );
+
+  console.log("data in useAccount", data);
 
   useEffect(() => {
     // nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined

@@ -50,25 +50,22 @@ contract BookMarketplace is ErrorMessages{
     _;
   }
 
-// We might need to fund the conract. receive is a reserved word
+//  fund the conract. 
    receive() external payable{
 
    }
 
-   // this will transfer amount to the owner
    function withdraw(uint amount) external onlyOwner{
      (bool success,)=owner.call{value:amount}("");
      require(success,"Transfer failed!");
 
    }
-  // incase contract is attacked, withdraw everything
    function emergencyWithdraw() external onlyWhenStopped onlyOwner {
      (bool success,)=owner.call{value:address(this).balance}("");
      require(success,"Transfer failed!");
    }
 
    function selfDestruct() external onlyWhenStopped onlyOwner{
-     // this will destruct the contract and transfer the remaining balance to the owner
      // selfdestruct() effectively removes the deployed bytecode from the contract address.
      selfdestruct(owner);
    }
@@ -117,7 +114,7 @@ contract BookMarketplace is ErrorMessages{
     if(!isBookCreated(bookHash)){
       revert BookIsNotCreated();
     }
-    // since we use storage, we can manipulate the data
+    // with using storage, we can manipulate the data
     Book storage book=ownedBooks[bookHash];
     if (book.state!=State.Purchased){
       revert InvalidState();
@@ -125,7 +122,6 @@ contract BookMarketplace is ErrorMessages{
     book.state=State.Activated;
   }
   
-  // keccak hash is 32 bytes
   function repurchaseBook(bytes32 bookHash)
   external 
   payable
@@ -138,9 +134,8 @@ contract BookMarketplace is ErrorMessages{
     if(!hasBookOwnership(bookHash)){
       revert SenderIsNotBookOwner();
     }
-    // at this point, we are sure the we are the owner
     Book storage book=ownedBooks[bookHash];
-    // we can repurchase only if the current state is deactivated
+    // repurchase only if the current state is deactivated
     if(book.state!=State.Deactivated){
       revert InvalidState();
     }
@@ -162,7 +157,6 @@ contract BookMarketplace is ErrorMessages{
     if (book.state!=State.Purchased){
       revert InvalidState();
     }
-    // transfer ether back to the owner
     (bool success, )=book.owner.call{value:book.price}("");
     require(success, "Transfer failed");
 
