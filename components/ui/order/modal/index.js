@@ -87,7 +87,6 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
                   <div className="text-xs text-gray-700 flex">
                     <label className="flex items-center mr-2">
                       <input
-                        autoComplete="off"
                         checked={enablePrice}
                         onChange={({ target: { checked } }) => {
                           setOrder({
@@ -136,6 +135,7 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
                       <label className="mb-2 font-bold">Email</label>
                     </div>
                     <input
+                      autoComplete="off"
                       onChange={({ target: { value } }) => {
                         setOrder({
                           ...order,
@@ -159,6 +159,7 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
                       <label className="mb-2 font-bold">Repeat Email</label>
                     </div>
                     <input
+                      autoComplete="off"
                       onChange={({ target: { value } }) => {
                         setOrder({
                           ...order,
