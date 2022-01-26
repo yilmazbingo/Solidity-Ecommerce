@@ -87,6 +87,7 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
                   <div className="text-xs text-gray-700 flex">
                     <label className="flex items-center mr-2">
                       <input
+                        autoComplete="off"
                         checked={enablePrice}
                         onChange={({ target: { checked } }) => {
                           setOrder({
@@ -106,6 +107,7 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
                 </div>
                 <input
                   disabled={!enablePrice}
+                  autoComplete="off"
                   value={order.price}
                   onChange={({ target: { value } }) => {
                     if (isNaN(value)) {
