@@ -20,7 +20,7 @@ contract BookMarketplace is ErrorMessages{
   }
 
   bool public isStopped=false; 
-
+ // mapping of bookHash to Book data
   mapping(bytes32 => Book) private ownedBooks;
 
   // mapping of bookID to bookHash
@@ -50,7 +50,7 @@ contract BookMarketplace is ErrorMessages{
     _;
   }
 
-//  fund the conract. 
+  //It is required to be implemented within a contract if the contract is intended to receive ether;
    receive() external payable{
 
    }
@@ -67,6 +67,9 @@ contract BookMarketplace is ErrorMessages{
 
    function selfDestruct() external onlyWhenStopped onlyOwner{
      // selfdestruct() effectively removes the deployed bytecode from the contract address.
+    // This is an address recipient that destroys the current contract, sending its funds to the given address
+    // once this is called you cannot interact with the smart contract anymore. the address of smart contract will contain no more code
+    // In the next block, this (former contract) address will act as a regular address without a smart contract, so it is able to receive tokens and ETH.
      selfdestruct(owner);
    }
 

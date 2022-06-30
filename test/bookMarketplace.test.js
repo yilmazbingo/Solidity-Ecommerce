@@ -163,6 +163,8 @@ contract("BookMarketplace", (accounts) => {
       const result = await _contract.deactivateBook(bookHash2, {
         from: contractOwner,
       });
+
+      console.log("result", result);
       const afterTXBuyerBalance = await getBalance(buyer);
       const afterTXContractBalance = await getBalance(_contract.address);
       const afterTXOwnerBalance = await getBalance(currentOwner);
