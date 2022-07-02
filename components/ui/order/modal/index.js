@@ -50,6 +50,7 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
   // console.log("eth", eth);
 
   useEffect(() => {
+    // !!=Boolean
     if (!!book) {
       setIsOpen(true);
       setOrder({
@@ -57,7 +58,7 @@ export default function OrderModal({ book, onClose, onSubmit, isNewPurchase }) {
         price: eth.itemPrice,
       });
     }
-  }, [book]);
+  }, [book, eth.itemPrice]);
 
   const closeModal = () => {
     setIsOpen(false);

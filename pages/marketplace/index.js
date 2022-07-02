@@ -36,7 +36,7 @@ export default function Marketplace({ books }) {
         { type: "bytes32", value: emailHash },
         { type: "bytes32", value: orderHash }
       );
-      withToast(_purchaseBook({ hexBookId, proof, value }, book));
+      withToast(_purchaseCourse({ hexBookId, proof, value }, course));
     } else {
       withToast(_repurchaseBook({ bookHash: orderHash, value }, book));
     }

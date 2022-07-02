@@ -6,7 +6,7 @@ import { _isEmpty } from "@utils/isDataEmpty";
 
 const enhanceHook = (swrRes) => {
   const { data, error } = swrRes;
-  // !!null=false but !![]=true,!![]=false
+  // !!null=false but !!{}=true,!![]=false
   const hasInitialResponse = !!(data || error);
   const isEmpty = hasInitialResponse && _isEmpty(data);
 
@@ -61,7 +61,7 @@ export const useAdmin = ({ redirectTo }) => {
     ) {
       router.push(redirectTo);
     }
-  }, [account, redirectTo, requireInstall]);
+  }, [account, redirectTo, requireInstall, router]);
 
   return { account };
 };

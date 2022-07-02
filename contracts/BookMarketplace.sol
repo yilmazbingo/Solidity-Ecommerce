@@ -20,12 +20,13 @@ contract BookMarketplace is ErrorMessages{
   }
 
   bool public isStopped=false; 
- // mapping of bookHash to Book data
+ // mapping of bookHash to Book data. When i fetch the data, I get the bookHash first from ownedBookHash then get the book by hash
   mapping(bytes32 => Book) private ownedBooks;
 
   // mapping of bookID to bookHash
   mapping(uint => bytes32) private ownedBookHash;
 
+  // this is used when fetching books in for-loop
   uint private totalOwnedBooks;
   address payable private owner;
 
@@ -175,7 +176,7 @@ contract BookMarketplace is ErrorMessages{
   {
     setContractOwner(newOwner);
   }
-
+   
   function getBookCount()
     external
     view

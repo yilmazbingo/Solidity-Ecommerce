@@ -15,6 +15,8 @@ const BreadcrumbItem = ({ item, index }) => {
   );
 };
 
+// breadcrumps are a type of navigational aid that hsows users where they are on your wbesote
+// usually appear as secondary naviagational bar at the top of a web oage
 export default function Breadcrumbs({ items, isAdmin }) {
   return (
     <nav aria-label="breadcrumb">
@@ -22,6 +24,7 @@ export default function Breadcrumbs({ items, isAdmin }) {
         {items.map((item, i) => (
           <React.Fragment key={item.href}>
             {!item.requireAdmin && <BreadcrumbItem item={item} index={i} />}
+            {/* "/marketplace/books/manage" only admin can view this */}
             {item.requireAdmin && isAdmin && (
               <BreadcrumbItem item={item} index={i} />
             )}

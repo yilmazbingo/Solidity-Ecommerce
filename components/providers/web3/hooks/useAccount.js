@@ -11,12 +11,13 @@ export const handler = (web3, provider) => () => {
   // A key — a string that serves as the unique identifier for the data we are fetching. This is usually the API URL we are calling
   // mutate revalidates
   const { data, mutate, ...rest } = useSWR(
-    // first arg is the identifier
+    // first arg is the identifier, unique key is passed to the fetcher
+    // SWR internally hashes the keys used for queries/mutation.
     () => (web3 ? "web3/accounts" : null),
     async () => {
       // if i m not logged in metamask, accounts[0] would be undefined. we should either return data or error in SWR
       const accounts = await web3.eth.getAccounts();
-      console.log("accounts", accounts);
+      // console.log("accounts", accounts);
       const account = accounts[0];
       if (!account) {
         throw new Error(
@@ -27,18 +28,19 @@ export const handler = (web3, provider) => () => {
     }
   );
 
-  console.log("data in useAccount", data);
+  // console.log("data in useAccount", data);
 
   useEffect(() => {
     // nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined
     // 'mutate' mutates the state that returned from useSwr
     const mutator = (accounts) => mutate(accounts[0] ?? null);
+    // if accounts changed, update the state
     provider?.on("accountsChanged", mutator);
 
     return () => {
       provider?.removeListener("accountsChanged", mutator);
     };
-  }, [provider]);
+  }, [mutate]);
 
   return {
     data,

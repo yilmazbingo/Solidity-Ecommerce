@@ -5,6 +5,7 @@ import { getAllBooks } from "@content/books/fetcher";
 
 export default function Home({ books }) {
   return (
+    // Array.from({length:2})=[undefined,undefined]
     <>
       <Hero />
       <BookList books={books}>

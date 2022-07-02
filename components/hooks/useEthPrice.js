@@ -12,8 +12,8 @@ const fetcher = async (url) => {
 
 export const useEthPrice = (course_price) => {
   const { data, ...rest } = useSWR(URL, fetcher, { refreshInterval: 10000 });
-
+  //  method converts a number to a string. The toFixed() method rounds the string to a specified number of decimals.
   const itemPrice = (data && (course_price / Number(data)).toFixed(6)) ?? null;
-  console.log("itemprice", itemPrice);
+  // console.log("itemprice", itemPrice);
   return { eth: { data, itemPrice, ...rest } };
 };
