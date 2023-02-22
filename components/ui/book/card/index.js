@@ -53,7 +53,7 @@ export default function Card({ book, disabled, Footer, state }) {
           </div>
 
           <Link href={`/books/${book.slug}`}>
-            <a className="h-12 block mt-1 text-sm sm:text-base leading-tight font-medium text-black hover:underline">
+            <a className="h-12 block mt-1 text-sm sm:text-base leading-tight font-medium text-black hover:underline capitalize">
               {book.title}
             </a>
           </Link>

@@ -14,6 +14,7 @@ export const handler = (web3, contract) => (account) => {
       //   I always get the newest book at the beginning of the array
       for (let i = Number(bookCount) - 1; i >= 0; i--) {
         const bookHash = await contract.methods.getBookHashAtIndex(i).call();
+        // return ownedBooks[bookHash];
         const book = await contract.methods.getBookByHash(bookHash).call();
         if (book) {
           //   first arg is book. admin does not need to know what book user has purchased

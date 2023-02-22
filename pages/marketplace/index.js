@@ -36,7 +36,7 @@ export default function Marketplace({ books }) {
         { type: "bytes32", value: emailHash },
         { type: "bytes32", value: orderHash }
       );
-      withToast(_purchaseCourse({ hexBookId, proof, value }, course));
+      withToast(_purchaseBook({ hexBookId, proof, value }, course));
     } else {
       withToast(_repurchaseBook({ bookHash: orderHash, value }, book));
     }
@@ -84,6 +84,7 @@ export default function Marketplace({ books }) {
     <>
       <MarketHeader />
       <BookList books={books}>
+        {/* a function that returns BookCard component. this function will be received as children */}
         {(book) => {
           //  -------- this is not effiecient. inside loop we have another loop. so we create look-up table
           // const owned=ownedBooks.data.find(c=>c.id==book.id)

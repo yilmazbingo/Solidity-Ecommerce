@@ -57,7 +57,7 @@ export default function Book({ book }) {
         locked={isLocked}
         bookState={bookState}
       />
-      <Modal />
+      {/* <Modal /> */}
     </>
   );
 }

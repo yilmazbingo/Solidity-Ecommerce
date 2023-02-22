@@ -7,7 +7,7 @@ export const handler = (web3, contract) => (book, account) => {
     () => (web3 && contract && account ? `web3/ownedBook/${account}` : null),
     async () => {
       const bookHash = createBookHash(web3)(book.id, account);
-
+      //     return ownedBooks[bookHash];
       const ownedBook = await contract.methods.getBookByHash(bookHash).call();
 
       if (ownedBook.owner === "0x0000000000000000000000000000000000000000") {
@@ -17,6 +17,5 @@ export const handler = (web3, contract) => (book, account) => {
       return normalizeOwnedBook(web3)(book, ownedBook);
     }
   );
-  console.log("swrRes in own book hook", swrRes);
   return swrRes;
 };

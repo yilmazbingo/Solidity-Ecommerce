@@ -39,12 +39,17 @@ export default function ManagedBooks() {
   const { web3, contract } = useWeb3();
   const { account } = useAdmin({ redirectTo: "/marketplace" });
   const { managedBooks } = useManagedBooks(account);
-
+  // not all websites work with metamask. so i need to figure out if the user really purschased the book
+  // so one of my other platforms, shopify, might not have metamask so i need to verify if the user really purschased the book
+  // user will send me the email and then i will verify
   const verifyBook = (email, { hash, proof }) => {
     if (!email) {
       return;
     }
+    // email + hash should be equal to proof
+    // sha3 is keccak256
     const emailHash = web3.utils.sha3(email);
+    // soliditySha3 we can provdie multiple values
     const proofToCheck = web3.utils.soliditySha3(
       { type: "bytes32", value: emailHash },
       { type: "bytes32", value: hash }
@@ -53,6 +58,7 @@ export default function ManagedBooks() {
     proofToCheck === proof
       ? setProofedOwnership({
           ...proofedOwnership,
+          // [hash] is the computed property
           [hash]: true,
         })
       : setProofedOwnership({
@@ -60,7 +66,7 @@ export default function ManagedBooks() {
           [hash]: false,
         });
   };
-
+  // activate or deactivate
   const changeBookState = async (bookHash, method) => {
     try {
       // since we want to dynamically call the method, we do not use . notation. we use []

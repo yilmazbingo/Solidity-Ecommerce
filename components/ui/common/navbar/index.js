@@ -8,12 +8,12 @@ export default function Navbar() {
   const { account } = useAccount();
   const { pathname } = useRouter();
 
-  console.log("Accoundata", account);
+  // console.log("Accoundata", account);
 
   return (
     //  Make sure the sticky element has top or bottom set. Or in the case of horizontal scrolling, left or right.
     <section
-      style={{ position: "sticky", top: 0, zIndex: 2 }}
+      // style={{ position: "sticky", top: 0, zIndex: 2 }}
       className=" bg-gray-300 "
     >
       <div className="relative pt-6 px-4 sm:px-6 lg:px-8">

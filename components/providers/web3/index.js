@@ -51,24 +51,22 @@ export default function Web3Provider({ children }) {
         console.error("Please, install Metamask.");
       }
     };
-
     loadProvider();
   }, []);
 
   const _web3Api = useMemo(() => {
     const { web3, provider, isLoading } = web3Api;
-    console.log("isLoading", isLoading);
-    console.log("web3", web3);
-    console.log("requireInstall: ", !isLoading && !web3);
     return {
       ...web3Api,
+      // if it is not loading and not web3 install metamask
       requireInstall: !isLoading && !web3,
       connect: provider
         ? async () => {
             try {
               await provider.request({ method: "eth_requestAccounts" });
-            } catch {
-              location.reload();
+            } catch (e) {
+              console.log("error requesting metamask connect", e);
+              // location.reload();
             }
           }
         : () =>

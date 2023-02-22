@@ -17,9 +17,9 @@ export default function WalletBar() {
         </h2>
         <div className="flex justify-between items-center">
           <div className="sm:flex sm:justify-center lg:justify-start">
-            <Button className="mr-2 text-sm xs:text-lg " variant="white">
+            {/* <Button className="mr-2 text-sm xs:text-lg " variant="white">
               Learn how to purchase
-            </Button>
+            </Button> */}
           </div>
           <div>
             {network.hasInitialResponse && !network.isSupported && (
